@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stranger Things - Contador</title>
+    <link rel="stylesheet" href="css/Style.css" />
+    <script src="https://kit.fontawesome.com/17dd42404d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+    <div class="container">
+        <div class="header-container">
+          <div class="nav-logo">
+            <img
+              src="images/strangerthings-whitelogo.png"
+              alt="Stranger Things Logo"
+            />
+          </div>
+        </div>
+
+        <div class="main-container">
+          <div class="mensage-container">
+            <h1>A ultima <span>aventura.</span><h1>
+              <p>A serie retorna para sua quinta e última temporada,<br>
+                e foi anunciada oficialmente no dia 17 de fevereiro de 2022.<br>
+                Essa temporada promete fortes emoções e o encerramento<br> de um ciclo, e está programada para ser lançada em três partes:<br>
+              </p>
+              <div class="volumes-text">
+                <ul>
+                  <li>Vol. 1 em 26 de novembro de 2025</li>
+                  <li>Vol. 2 em 25 de dezembro de 2025 </li>
+                  <li>Ultimo episodio em 31 de dezembro de 2025.</li>
+                </ul>
+              </div>
+          </div>
+          <div class="arrows-container">
+            <button id="change-bg"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="countdown-container">
+          <div class="content">
+            <h1>Volume 1</h1>
+            <div class="countdown">
+              <div class="circle days-circle">
+                <span id="days">00</span>
+                <div class="label">dias</div>
+              </div>
+              <div class="circle hours-circle">
+                <span id="hours">00</span>
+                <div class="label">horas</div>
+              </div>
+              <div class="circle minutes-circle">
+                <span id="minutes">00</span>
+                <div class="label">minutos</div>
+              </div>
+              <div class="circle seconds-circle">
+                <span id="seconds">00</span>
+                <div class="label">segundos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-container">
+          <p>Desenvolvido diretamente do <a href="https://linktr.ee/canessodev">Upside Down</a> por <a href="https://linktr.ee/canessodev" target="_blank">Canessodev</a></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

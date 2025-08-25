@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "StrangerThings-Benguiat-Bold";
+  src: url(../fonts/Benguiat\ Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "StrangerThings-Benguiat-Outline";
+  src: url(../fonts/Stranger\ Things\ Outlined.ttf) format("truetype");
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- CORREÇÕES E LAYOUT PRINCIPAL --- */
+body {
+  /* Fundo mantido */
+  background-color: #000;
+  background: url("../images/img-background.jpg") no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container Geral */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  margin: 0 5% 0 5%;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-logo {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 100%;
+}
+
+.countdown-container {
+  width: 100%;
+}
+
+.mensage-container {
+  width: 100%;
+  display: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  padding: 20px 0 20px 0;
+}
+
+.arrows-container{
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+}
+
+
+.volumes-text {
+  width: 30%;
+  margin: 10px 0 0 40px;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* --- TEXTOS --- */
+
+h1 {
+  font-family: "StrangerThings-Benguiat-Bold", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+ul li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+span {
+  color: #f00a0a;
+}
+
+button{
+  background: none;
+  border: none;
+  color: #ffffff;
+  width: 55px;
+}
+
+button:hover{
+  transition: all 0.5s ease-in;
+  color: #f00a0a;
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+button i{
+  font-size: 2.0rem;
+}
+
+a{
+  text-decoration: none;
+  color: #f00a0a;
+}
+
+a:hover{
+  transition: all 0.5s ease-in;
+  color: #680c0c;
+}
+
+/* Círculos do Contador */
+
+.content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  text-align: left;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+  overflow: visible;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 28px 40px rgba(255, 0, 0, 0.3),
+    inset 0 -26px 38px rgba(177, 15, 15, 0.6), 0 0 35px rgba(255, 0, 0, 0.7),
+    0 0 70px rgba(255, 0, 0, 0.35);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 3px solid red;
+  border-radius: 50%;
+  opacity: 0.85;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.circle span {
+  font-family: "StrangerThings-Benguiat-Bold", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 5px;
+  z-index: 2;
+}
+
+.label {
+  font-family: "StrangerThings-Benguiat-Bold", sans-serif;
+  font-size: 1rem;
+  color: #ffffffc4;
+  z-index: 2;
+}
+
+@keyframes rotateLoop1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLoop2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.days-circle::after,
+.minutes-circle::after {
+  animation: rotateLoop1 10s linear infinite;
+}
+
+.hours-circle::after,
+.seconds-circle::after {
+  animation: rotateLoop2 2s linear infinite;
+}
